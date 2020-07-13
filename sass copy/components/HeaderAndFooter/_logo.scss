@@ -1,0 +1,35 @@
+.header-logo {
+  font-family: 'Raleway', sans-serif;
+  color: $secondary-text-color;
+  font-weight: 700;
+  font-size: 26px;
+  width: 153px;
+  height: 31px;
+  transition: 250ms text-shadow $cubic;
+  &:hover,
+  &:focus {
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+}
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  color: $secondary-text-color;
+  font-weight: 700;
+  font-size: 26px;
+
+  transition: 250ms text-shadow $cubic;
+  &-studio {
+    color: $secondary-white-color;
+  }
+  &:hover,
+  &:focus {
+    text-shadow: 1px 4px 6px rgba(255, 255, 255, 0.16),
+      0px 4px 4px rgba(182, 173, 173, 0.06),
+      0px 1px 1px rgba(179, 165, 165, 0.12);
+  }
+}
+
+.logo-web {
+  color: $accent-collor;
+}

@@ -1,0 +1,103 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $main-backgrond;
+  border-bottom: 1px solid $secondary-backgrond;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.header-address {
+  display: flex;
+  margin-left: auto;
+}
+
+.main-nav {
+  margin-left: 85px;
+
+  color: $secondary-text-color;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  & .link {
+    transition: 250ms color $cubic;
+  }
+}
+
+.flex-nav {
+  display: flex;
+
+  & .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-radius: 2px;
+
+    &:hover,
+    &:focus {
+      color: $accent-collor;
+    }
+  }
+}
+
+.active {
+  position: relative;
+  color: $accent-collor;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    border: $accent-collor solid 2px;
+    border-radius: 2px;
+
+    content: '';
+  }
+}
+
+.main-nav .item + .item {
+  margin-left: 50px;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  transition: 250ms color $cubic;
+  margin-right: 50px;
+  &:hover,
+  &:focus {
+    color: $accent-collor;
+  }
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  transition: 250ms color $cubic;
+  &:hover,
+  &:focus {
+    color: $accent-collor;
+  }
+}
+
+.address-text {
+  margin-left: 10px;
+}
+
+.icon-mail {
+  width: 16px;
+  height: 11px;
+}
+.icon-phone {
+  width: 10px;
+  height: 15px;
+}

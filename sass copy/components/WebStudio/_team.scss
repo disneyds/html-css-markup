@@ -1,0 +1,66 @@
+.team {
+  padding: 94px 0;
+  background-color: $secondary-backgrond;
+}
+
+.team-name {
+  margin-top: 30px;
+  color: $secondary-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.team-flex {
+  display: flex;
+  margin-top: 50px;
+
+  & .human + .human {
+    margin-left: 30px;
+  }
+}
+
+.human {
+  width: 270px;
+  text-align: center;
+  background-color: $main-backgrond;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.human-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  & .item + .item {
+    margin-left: 10px;
+  }
+  & .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.human-contacts .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $icon-color;
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: $secondary-white-color;
+  transition: 250ms color $cubic, 250ms background-color $cubic;
+
+  &:hover,
+  &:focus {
+    color: $secondary-white-color;
+    background-color: $accent-collor;
+  }
+}
+
+.human > p {
+  margin-top: 10px;
+}
