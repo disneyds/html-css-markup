@@ -1,7 +1,10 @@
 .hero {
+  @media screen and (max-width: 1199px) {
+    padding: 118px 0;
+  }
   padding: 200px 0;
   text-align: center;
-  height: 600px;
+
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -14,13 +17,14 @@
     ),
     url(../img/hero-img.jpg);
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
   color: $secondary-white-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 136%;
+  font-size: 26px;
+  line-height: 162%;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;

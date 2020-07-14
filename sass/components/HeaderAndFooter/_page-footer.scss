@@ -4,16 +4,17 @@ footer {
 }
 
 .footer-flex {
-  display: flex;
-  align-items: baseline;
-  padding-top: 48px;
-  padding-bottom: 28px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
 }
 
 .footer-address {
-  width: 229px;
   display: inline-block;
   color: $secondary-white-color;
+  @media screen and (max-width: $desktop) {
+    margin-top: 20px;
+  }
   margin-top: 8px;
 }
 
@@ -30,12 +31,24 @@ footer {
 }
 
 .subscribe-conteiner {
-  margin-left: 69px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 69px;
+  }
+  @media screen and (max-width: $desktop) {
+    margin-top: 60px;
+  }
 }
 
 .subscribe {
   display: inline-block;
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.subscribe-form {
+  display: inline-block;
 
   font-size: 14px;
   line-height: 16px;
@@ -45,6 +58,7 @@ footer {
 
 .sub-flex {
   display: flex;
+  justify-content: center;
   & .item + .item {
     margin-left: 10px;
   }
@@ -72,11 +86,9 @@ footer {
 }
 
 .form-conteiner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-left: 94px;
-  width: 100%;
+  @media screen and (max-width: $desktop) {
+    margin-top: 60px;
+  }
 }
 
 .footer-form {
@@ -87,7 +99,10 @@ footer {
 .footer-input {
   display: inline-block;
   margin-right: auto;
-  width: 358px;
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    margin: 20px 0;
+  }
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -125,7 +140,12 @@ footer {
   display: flex;
   align-items: center;
   margin-left: 12px;
+
   transition: 250ms box-shadow $cubic;
+
+  @media screen and (max-width: $desktop) {
+    margin: 0 auto;
+  }
 
   &:hover,
   &:focus {

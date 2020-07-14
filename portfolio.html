@@ -22,37 +22,50 @@
         <a href="./index.html" class="header-logo">
           <span class="logo-web">Web </span>Studio
           <!-- <svg class="icon header-logo">
-                    <use href="./img/symbol-defs.svg#icon-header-logo"></use>
-                  </svg> -->
+              <use href="./img/symbol-defs.svg#icon-header-logo"></use>
+            </svg> -->
         </a>
-        <nav class="main-nav">
-          <ul class="no-padding no-margin flex-nav">
-            <li class="item">
-              <a href="./index.html" class="link">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="link active">Портфолио </a>
-            </li>
-            <li class="item">
-              <a href="" class="link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-address">
-          <a href="mailto:info@devstudio.com" class="mail">
-            <svg class="icon icon-mail">
-              <use href="./img/symbol-defs.svg#icon-mail"></use>
-            </svg>
-            <span class="address-text">info@devstudio.com</span></a
-          >
+        <div class="mobile-menu" id="menu-container" data-menu>
+          <nav class="main-nav">
+            <ul class="no-padding no-margin flex-nav">
+              <li class="item">
+                <a href="./index.html" class="link">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link active">Портфолио </a>
+              </li>
+              <li class="item">
+                <a href="" class="link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="header-address">
+            <a href="mailto:info@devstudio.com" class="mail">
+              <svg class="icon icon-mail">
+                <use href="./img/symbol-defs.svg#icon-mail"></use>
+              </svg>
+              <span class="address-text">info@devstudio.com</span></a
+            >
 
-          <a href="tel:+380961111111" class="phone">
-            <svg class="icon icon-phone">
-              <use href="./img/symbol-defs.svg#icon-phone"></use>
-            </svg>
-            <span class="address-text">+38 096 111 11 11</span></a
-          >
-        </address>
+            <a href="tel:+380961111111" class="phone">
+              <svg class="icon icon-phone">
+                <use href="./img/symbol-defs.svg#icon-phone"></use>
+              </svg>
+              <span class="address-text">+38 096 111 11 11</span></a
+            >
+          </address>
+        </div>
+        <button
+          class="menu-button"
+          type="button"
+          data-menu-button
+          aria-label="Переключатель мобильного меню"
+        >
+          <svg width="40" height="40">
+            <use class="close-menu" href="./img/menu-icon.svg#close_menu"></use>
+            <use class="open-menu" href="./img/menu-icon.svg#open_menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -300,7 +313,7 @@
           </ul>
         </div>
         <div class="form-conteiner">
-          <b class="subscribe">Подпишитесь на рассылку</b>
+          <b class="subscribe-form">Подпишитесь на рассылку</b>
           <form class="footer-form">
             <input
               class="footer-input"
@@ -320,5 +333,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

@@ -19,7 +19,11 @@ body {
   color: var(--main-text-color);
   font-size: 14px;
   letter-spacing: 0.03em;
+
   padding-top: 80px;
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+  }
 }
 
 .is-hidden {
@@ -47,18 +51,19 @@ body {
 }
 
 .conteiner {
-  width: 1200px;
+  // width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  //   @media screen and (min-width: 480px) {
-  //     width: $mobile;
-  //   }
-  //   @media screen and (min-width: 768px) {
-  //     width: $tablet;
-  //   }
-  //   @media screen and (min-width: 1200px) {
-  //     width: $desktop;
-  //   }
+  // outline: 2px solid black;
+  @media screen and (min-width: 480px) {
+    width: $mobile;
+  }
+  @media screen and (min-width: 768px) {
+    width: $tablet;
+  }
+  @media screen and (min-width: 1200px) {
+    width: $desktop;
+  }
 }
 
 .icon {

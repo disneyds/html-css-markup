@@ -1,6 +1,10 @@
 header {
   position: fixed;
+
   width: 100%;
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
   top: 0;
   left: 0;
   z-index: 10;
@@ -8,19 +12,7 @@ header {
   border-bottom: 1px solid $secondary-backgrond;
 }
 
-.header-flex {
-  display: flex;
-  align-items: center;
-}
-
-.header-address {
-  display: flex;
-  margin-left: auto;
-}
-
 .main-nav {
-  margin-left: 85px;
-
   color: $secondary-text-color;
   font-weight: 500;
   font-size: 14px;
@@ -32,13 +24,11 @@ header {
 }
 
 .flex-nav {
-  display: flex;
-
+  margin-bottom: 60px;
   & .link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    border-radius: 2px;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     &:hover,
     &:focus {
@@ -63,34 +53,28 @@ header {
     content: '';
   }
 }
-
-.main-nav .item + .item {
-  margin-left: 50px;
+.header-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $main-text-color;
 }
 
 .mail {
-  display: flex;
-  align-items: center;
   transition: 250ms color $cubic;
-  margin-right: 50px;
+  margin-bottom: 16px;
   &:hover,
   &:focus {
     color: $accent-collor;
   }
 }
-
 .phone {
-  display: flex;
-  align-items: center;
   transition: 250ms color $cubic;
+
   &:hover,
   &:focus {
     color: $accent-collor;
   }
-}
-
-.address-text {
-  margin-left: 10px;
 }
 
 .icon-mail {

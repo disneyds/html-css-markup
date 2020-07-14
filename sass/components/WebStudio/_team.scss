@@ -1,4 +1,7 @@
 .team {
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
   padding: 94px 0;
   background-color: $secondary-backgrond;
 }
@@ -11,16 +14,13 @@
   line-height: 1.2;
 }
 
-.team-flex {
-  display: flex;
-  margin-top: 50px;
-
-  & .human + .human {
-    margin-left: 30px;
-  }
-}
-
 .human {
+  @media screen and (max-width: $tablet) {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 24px;
+  }
+
   width: 270px;
   text-align: center;
   background-color: $main-backgrond;
@@ -62,5 +62,6 @@
 }
 
 .human > p {
+  color: $main-text-color;
   margin-top: 10px;
 }
