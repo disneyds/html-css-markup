@@ -1,13 +1,25 @@
 .features {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $desktop) {
     padding: 60px 0;
   }
   padding-top: 94px;
 }
 
-.features-flex:not(:last-child) .item {
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 30px;
+.features-flex {
+  @media screen and (max-width: $desktop) {
+    &:not(:last-child) .item {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    & .item {
+      margin: 15px;
+      width: calc((100% - 2 * 30px) / 2);
+    }
   }
 }
 .features-item {

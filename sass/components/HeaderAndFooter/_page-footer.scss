@@ -7,6 +7,13 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
 }
 
 .footer-address {
@@ -18,24 +25,29 @@ footer {
   margin-top: 8px;
 }
 
-.contacts .link {
-  display: block;
-  margin-top: 9px;
-  color: rgba(255, 255, 255, 0.6);
-  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+.contacts {
+  @media screen and (min-width: $tablet) {
+    margin-right: 156px;
+  }
+  & .link {
+    display: block;
+    margin-top: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $accent-collor;
+    &:hover,
+    &:focus {
+      color: $accent-collor;
+    }
   }
 }
 
 .subscribe-conteiner {
+  @media screen and (max-width: $tablet) {
+    margin-top: 60px;
+  }
   @media screen and (min-width: $desktop) {
     margin-left: 69px;
-  }
-  @media screen and (max-width: $desktop) {
-    margin-top: 60px;
   }
 }
 
@@ -101,6 +113,10 @@ footer {
   margin-right: auto;
   @media screen and (max-width: $tablet) {
     width: 100%;
+    margin: 20px 0;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 450px;
     margin: 20px 0;
   }
   padding: 15px 16px;

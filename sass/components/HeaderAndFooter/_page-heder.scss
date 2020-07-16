@@ -2,9 +2,10 @@ header {
   position: fixed;
 
   width: 100%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet) {
     height: 60px;
   }
+
   top: 0;
   left: 0;
   z-index: 10;
@@ -18,22 +19,56 @@ header {
   font-size: 14px;
   letter-spacing: 0.02em;
 
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-right: 85px;
+  }
+
   & .link {
     transition: 250ms color $cubic;
   }
 }
-
+.header-flex {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.mobile-menu {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .flex-nav {
-  margin-bottom: 60px;
-  & .link {
-    display: inline-block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    &:hover,
-    &:focus {
-      color: $accent-collor;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+    & .link {
+      display: inline-block;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    & .item + .item {
+      margin-left: 50px;
+    }
+    & .link {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      border-radius: 2px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-collor;
   }
 }
 

@@ -1,5 +1,5 @@
 .team {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: $desktop) {
     padding: 60px 0;
   }
   padding: 94px 0;
@@ -14,25 +14,40 @@
   line-height: 1.2;
 }
 
-.human {
-  @media screen and (max-width: $tablet) {
-    margin: 0 auto;
+.team-flex {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: -15px;
     margin-top: 30px;
-    padding-bottom: 24px;
   }
 
-  width: 270px;
-  text-align: center;
-  background-color: $main-backgrond;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
+  & .human {
+    width: 270px;
+    text-align: center;
+    background-color: $main-backgrond;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    @media screen and (max-width: $tablet) {
+      margin: 0 auto;
+      margin-top: 30px;
+      padding-bottom: 24px;
+    }
+    @media screen and (min-width: $tablet) {
+      margin: 15px;
+      // width: calc((100% - 2 * 30px) / 2);
+    }
+  }
 }
 
 .human-contacts {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 16px;
+  margin-top: 16px;
   & .item + .item {
     margin-left: 10px;
   }
