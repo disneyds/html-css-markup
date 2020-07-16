@@ -126,6 +126,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    margin-right: 305px;
+  }
+}
+
 .main-nav .link {
   -webkit-transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
@@ -153,9 +159,6 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
@@ -210,20 +213,48 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   color: #757575;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .mail {
   -webkit-transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .mail {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mail {
+    margin-right: 50px;
+  }
 }
 
 .mail:hover, .mail:focus {
@@ -249,7 +280,7 @@ header {
   height: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .mobile-menu {
     position: fixed;
     top: 60px;
@@ -840,6 +871,22 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .features-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  .features-flex .item {
+    margin: 0;
+    width: calc((100% - 4 * 30px) / 4);
+  }
+  .features-flex .item + .item {
+    margin-left: 30px;
+  }
+}
+
 .features-item {
   color: #212121;
   font-weight: bold;
@@ -976,6 +1023,7 @@ header {
 }
 
 .team-flex .human {
+  padding-bottom: 24px;
   width: 270px;
   text-align: center;
   background-color: #ffffff;
@@ -987,7 +1035,6 @@ header {
   .team-flex .human {
     margin: 0 auto;
     margin-top: 30px;
-    padding-bottom: 24px;
   }
 }
 
@@ -1054,21 +1101,19 @@ header {
   text-align: center;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .company {
     padding: 60px 0;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .company-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -15px;
-  }
+.company-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 .company-item {
@@ -1095,6 +1140,14 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .company-item {
+    margin: 15px;
+    height: 90px;
+    width: calc((100% - 6 * 30px) / 6);
+  }
+}
+
 .company-item .link {
   outline: transparent;
   width: 100%;
@@ -1116,7 +1169,13 @@ header {
 }
 
 .company-title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .company-title {
+    margin-bottom: 30px;
+  }
 }
 
 .logo-1 {
@@ -1175,6 +1234,14 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .footer-address {
   display: inline-block;
   color: #ffffff;
@@ -1190,6 +1257,13 @@ footer {
 @media screen and (min-width: 768px) {
   .contacts {
     margin-right: 156px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    text-align: start;
+    margin-right: 0;
   }
 }
 
@@ -1232,6 +1306,12 @@ footer {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    margin-bottom: 20px;
+  }
 }
 
 .sub-flex {
@@ -1282,6 +1362,24 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .form-conteiner {
+    position: relative;
+    text-align: start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 94px;
+  }
+}
+
 .footer-form {
   position: relative;
   display: block;
@@ -1310,6 +1408,13 @@ footer {
   .footer-input {
     width: 450px;
     margin: 20px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    width: 372px;
+    margin: 0;
   }
 }
 
@@ -1356,6 +1461,14 @@ footer {
 @media screen and (max-width: 1200px) {
   .form-conteiner .btn {
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-conteiner .btn {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
   }
 }
 
@@ -1494,15 +1607,13 @@ footer {
           box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 1200px) {
-  .projects-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -15px;
-  }
+.projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 .portfolio-card {
@@ -1522,6 +1633,13 @@ footer {
   .portfolio-card {
     margin: 15px;
     width: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-card {
+    margin: 15px;
+    width: calc((100% - 3 * 30px) / 3);
   }
 }
 

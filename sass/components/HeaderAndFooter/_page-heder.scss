@@ -24,6 +24,9 @@ header {
     align-items: center;
     margin-right: 85px;
   }
+  @media screen and (min-width: $desktop) {
+    margin-right: 305px;
+  }
 
   & .link {
     transition: 250ms color $cubic;
@@ -40,7 +43,6 @@ header {
   @media screen and (min-width: $tablet) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 }
 .flex-nav {
@@ -90,14 +92,27 @@ header {
 }
 .header-address {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: baseline;
+  // margin-left: auto;
   color: $main-text-color;
+  @media screen and (max-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .mail {
   transition: 250ms color $cubic;
-  margin-bottom: 16px;
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 50px;
+  }
+
   &:hover,
   &:focus {
     color: $accent-collor;

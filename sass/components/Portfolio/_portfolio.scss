@@ -70,11 +70,9 @@
   }
 }
 .projects-list {
-  @media screen and (max-width: $desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 .portfolio-card {
   width: 370px;
@@ -89,6 +87,12 @@
     margin: 15px;
 
     width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 15px;
+
+    width: calc((100% - 3 * 30px) / 3);
   }
   // grid
 

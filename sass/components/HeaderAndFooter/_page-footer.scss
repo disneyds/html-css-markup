@@ -14,6 +14,10 @@ footer {
     align-items: baseline;
     justify-content: space-around;
   }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: flex-start;
+  }
 }
 
 .footer-address {
@@ -28,6 +32,10 @@ footer {
 .contacts {
   @media screen and (min-width: $tablet) {
     margin-right: 156px;
+  }
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+    margin-right: 0;
   }
   & .link {
     display: block;
@@ -60,6 +68,9 @@ footer {
   text-transform: uppercase;
 }
 .subscribe-form {
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
   display: inline-block;
 
   font-size: 14px;
@@ -101,6 +112,15 @@ footer {
   @media screen and (max-width: $desktop) {
     margin-top: 60px;
   }
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 94px;
+  }
 }
 
 .footer-form {
@@ -118,6 +138,12 @@ footer {
   @media screen and (min-width: $tablet) {
     width: 450px;
     margin: 20px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 372px;
+    margin: 0;
+    // margin-top: 20px;
   }
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -161,6 +187,12 @@ footer {
 
   @media screen and (max-width: $desktop) {
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
   }
 
   &:hover,
