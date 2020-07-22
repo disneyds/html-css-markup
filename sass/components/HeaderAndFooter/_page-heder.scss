@@ -52,6 +52,10 @@ header {
       display: inline-block;
       padding-top: 20px;
       padding-bottom: 20px;
+      &:hover,
+      &:focus {
+        color: $accent-collor;
+      }
     }
   }
 
@@ -65,12 +69,11 @@ header {
       padding-top: 32px;
       padding-bottom: 32px;
       border-radius: 2px;
+      &:hover,
+      &:focus {
+        color: $accent-collor;
+      }
     }
-  }
-
-  &:hover,
-  &:focus {
-    color: $accent-collor;
   }
 }
 
