@@ -1,38 +1,7 @@
 .features {
-  @media screen and (max-width: $desktop) {
-    padding: 60px 0;
-  }
   padding-top: 94px;
 }
 
-.features-flex {
-  @media screen and (max-width: $desktop) {
-    &:not(:last-child) .item {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-    & .item {
-      margin: 15px;
-      width: calc((100% - 2 * 30px) / 2);
-    }
-  }
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    margin: 0;
-    & .item {
-      margin: 0;
-      width: calc((100% - 4 * 30px) / 4);
-    }
-    & .item + .item {
-      margin-left: 30px;
-    }
-  }
-}
 .features-item {
   color: $secondary-text-color;
   font-weight: bold;
@@ -44,7 +13,7 @@
   &:before {
     display: block;
     content: '';
-    // width: 270px;
+    width: 270px;
     height: 120px;
     margin-left: auto;
     margin-right: auto;
@@ -61,6 +30,14 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 171%;
+}
+
+.features-flex {
+  display: flex;
+
+  & .item + .item {
+    margin-left: 30px;
+  }
 }
 
 .icon-feature-1::before {

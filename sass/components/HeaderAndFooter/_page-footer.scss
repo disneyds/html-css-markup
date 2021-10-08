@@ -4,74 +4,38 @@ footer {
 }
 
 .footer-flex {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-around;
-  }
-
-  @media screen and (min-width: $desktop) {
-    justify-content: flex-start;
-  }
+  display: flex;
+  align-items: baseline;
+  padding-top: 48px;
+  padding-bottom: 28px;
 }
 
 .footer-address {
+  width: 229px;
   display: inline-block;
   color: $secondary-white-color;
-  @media screen and (max-width: $desktop) {
-    margin-top: 20px;
-  }
   margin-top: 8px;
 }
 
-.contacts {
-  @media screen and (min-width: $tablet) {
-    margin-right: 156px;
-  }
-  @media screen and (min-width: $desktop) {
-    text-align: start;
-    margin-right: 0;
-  }
-  & .link {
-    display: block;
-    margin-top: 9px;
-    color: rgba(255, 255, 255, 0.6);
-    transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+.contacts .link {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-      color: $accent-collor;
-    }
+  &:hover,
+  &:focus {
+    color: $accent-collor;
   }
 }
 
 .subscribe-conteiner {
-  @media screen and (max-width: $tablet) {
-    margin-top: 60px;
-  }
-  @media screen and (min-width: $desktop) {
-    margin-left: 69px;
-  }
+  margin-left: 69px;
 }
 
 .subscribe {
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-.subscribe-form {
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 20px;
-  }
-  display: inline-block;
 
   font-size: 14px;
   line-height: 16px;
@@ -81,7 +45,6 @@ footer {
 
 .sub-flex {
   display: flex;
-  justify-content: center;
   & .item + .item {
     margin-left: 10px;
   }
@@ -109,18 +72,11 @@ footer {
 }
 
 .form-conteiner {
-  @media screen and (max-width: $desktop) {
-    margin-top: 60px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    position: relative;
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 94px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 94px;
+  width: 100%;
 }
 
 .footer-form {
@@ -131,20 +87,7 @@ footer {
 .footer-input {
   display: inline-block;
   margin-right: auto;
-  @media screen and (max-width: $tablet) {
-    width: 100%;
-    margin: 20px 0;
-  }
-  @media screen and (min-width: $tablet) {
-    width: 450px;
-    margin: 20px 0;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 372px;
-    margin: 0;
-    // margin-top: 20px;
-  }
+  width: 358px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -182,18 +125,7 @@ footer {
   display: flex;
   align-items: center;
   margin-left: 12px;
-
   transition: 250ms box-shadow $cubic;
-
-  @media screen and (max-width: $desktop) {
-    margin: 0 auto;
-  }
-
-  @media screen and (min-width: $desktop) {
-    position: absolute;
-    bottom: 0;
-    left: 100%;
-  }
 
   &:hover,
   &:focus {
