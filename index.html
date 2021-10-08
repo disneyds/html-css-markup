@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
 
     <title>Web Studio v.1</title>
   </head>
@@ -20,53 +20,40 @@
   <body>
     <header class="header">
       <div class="conteiner header-flex">
-        <a href="./index.html" class="header-logo">
-          <span class="logo-web">Web </span>Studio
+        <a href="./index.html" class="logo">
+          <span class="main-logo">Web </span>Studio
           <!-- <svg class="icon header-logo">
             <use href="./img/symbol-defs.svg#icon-header-logo"></use>
           </svg> -->
         </a>
-        <div class="mobile-menu" id="menu-container" data-menu>
-          <nav class="main-nav">
-            <ul class="no-padding no-margin flex-nav">
-              <li class="item">
-                <a href="./index.html" class="link active">Студия</a>
-              </li>
-              <li class="item">
-                <a href="./portfolio.html" class="link">Портфолио </a>
-              </li>
-              <li class="item">
-                <a href="" class="link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <address class="header-address">
-            <a href="mailto:info@devstudio.com" class="mail">
-              <svg class="icon icon-mail">
-                <use href="./img/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              <span class="address-text">info@devstudio.com</span></a
-            >
+        <nav class="main-nav">
+          <ul class="no-padding no-margin flex-nav">
+            <li class="item">
+              <a href="./index.html" class="link active">Студия</a>
+            </li>
+            <li class="item">
+              <a href="./portfolio.html" class="link">Портфолио </a>
+            </li>
+            <li class="item">
+              <a href="" class="link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="header-address">
+          <a href="mailto:info@devstudio.com" class="mail">
+            <svg class="icon icon-mail">
+              <use href="./img/symbol-defs.svg#icon-mail"></use>
+            </svg>
+            <span class="address-text">info@devstudio.com</span></a
+          >
 
-            <a href="tel:+380961111111" class="phone">
-              <svg class="icon icon-phone">
-                <use href="./img/symbol-defs.svg#icon-phone"></use>
-              </svg>
-              <span class="address-text">+38 096 111 11 11</span></a
-            >
-          </address>
-        </div>
-        <button
-          class="menu-button"
-          type="button"
-          data-menu-button
-          aria-label="Переключатель мобильного меню"
-        >
-          <svg width="40" height="40">
-            <use class="close-menu" href="./img/menu-icon.svg#close_menu"></use>
-            <use class="open-menu" href="./img/menu-icon.svg#open_menu"></use>
-          </svg>
-        </button>
+          <a href="tel:+380961111111" class="phone">
+            <svg class="icon icon-phone">
+              <use href="./img/symbol-defs.svg#icon-phone"></use>
+            </svg>
+            <span class="address-text">+38 096 111 11 11</span></a
+          >
+        </address>
       </div>
     </header>
     <main>
@@ -141,17 +128,17 @@
             <label class="policy">
               <input class="hide checkbox" name="policy" type="checkbox" />
               <span class="policy-icon"></span>
-              <span class="policy-text">Соглашаюсь с рассылкой и принимаю</span>
-              <a class="policy-link" href="./document.html">Условия договора</a>
+              <span>Соглашаюсь с рассылкой и принимаю</span>
+              <a class="link" href="./document.html">Условия договора</a>
             </label>
 
             <button type="submit" class="btn">Отправить</button>
+            <button data-modal-close type="button" class="close-btn">
+              <svg class="icon icon-close-modal">
+                <use href="./img/modal-svg.svg#icon-close-modal"></use>
+              </svg>
+            </button>
           </form>
-          <button data-modal-close type="button" class="close-btn">
-            <svg class="icon icon-close-modal">
-              <use href="./img/modal-svg.svg#icon-close-modal"></use>
-            </svg>
-          </button>
         </div>
       </div>
       <!-- Features -->
@@ -207,40 +194,12 @@
             <li class="item">
               <div class="box">
                 <a href="">
-                  <!-- <img
+                  <img
                     src="./img/box1.jpg"
                     alt="Ноутбук"
                     width="370"
                     height="294"
-                  /> -->
-
-                  <picture>
-                    <source
-                      srcset="
-                        ./img/work/work-1/img.webp    370w,
-                        ./img/work/work-1/img@2x.webp 740w
-                      "
-                      type="image/webp"
-                      media="(min-width: 1200px)"
-                      sizes="370px"
-                    />
-
-                    <source
-                      srcset="
-                        ./img/work/work-1/img.jpg    370w,
-                        ./img/work/work-1/img@2x.jpg 740w
-                      "
-                      media="(min-width: 1200px)"
-                      sizes="370px"
-                    />
-
-                    <img
-                      src="./img/work/work-1/img.jpg"
-                      sizes="370px"
-                      alt="Десктопное приложение"
-                    />
-                  </picture>
-
+                  />
                   <h3 class="box-title no-margin">Десктопные приложения</h3></a
                 >
               </div>
@@ -248,38 +207,12 @@
             <li class="item">
               <div class="box">
                 <a href="">
-                  <!-- <img
+                  <img
                     src="./img/box2.jpg"
                     alt="Мобильный телефон"
                     width="370"
                     height="294"
-                  /> -->
-                  <picture>
-                    <source
-                      srcset="
-                        ./img/work/work-2/img.webp    370w,
-                        ./img/work/work-2/img@2x.webp 740w
-                      "
-                      type="image/webp"
-                      media="(min-width: 1200px)"
-                      sizes="370px"
-                    />
-
-                    <source
-                      srcset="
-                        ./img/work/work-2/img.jpg    370w,
-                        ./img/work/work-2/img@2x.jpg 740w
-                      "
-                      media="(min-width: 1200px)"
-                      sizes="370px"
-                    />
-
-                    <img
-                      src="./img/work/work-2/img.jpg"
-                      sizes="370px"
-                      alt="Десктопное приложение"
-                    />
-                  </picture>
+                  />
                   <h3 class="box-title no-margin">Мобильные приложения</h3></a
                 >
               </div>
@@ -287,38 +220,12 @@
             <li class="item">
               <div class="box">
                 <a href="">
-                  <!-- <img
+                  <img
                     src="./img/box3.jpg"
                     alt="Монитор"
                     width="370"
                     height="294"
-                  /> -->
-                  <picture>
-                    <source
-                      srcset="
-                        ./img/work/work-3/img.webp    370w,
-                        ./img/work/work-3/img@2x.webp 740w
-                      "
-                      type="image/webp"
-                      media="(min-width: 1200px)"
-                      sizes="370px"
-                    />
-
-                    <source
-                      srcset="
-                        ./img/work/work-3/img.jpg    370w,
-                        ./img/work/work-3/img@2x.jpg 740w
-                      "
-                      media="(min-width: 1200px)"
-                      sizes="370px"
-                    />
-
-                    <img
-                      src="./img/work/work-3/img.jpg"
-                      sizes="370px"
-                      alt="Десктопное приложение"
-                    />
-                  </picture>
+                  />
                   <h3 class="box-title no-margin">Дизайнерские решения</h3></a
                 >
               </div>
@@ -332,78 +239,12 @@
           <h2 class="team-title no-margin">Наша команда</h2>
           <ul class="no-margin no-padding team-flex">
             <li class="human">
-              <!-- <img
+              <img
                 src="./img/human1.jpg"
                 alt="человек"
                 width="270"
                 height="260"
-              /> -->
-              <picture>
-                <source
-                  srcset="
-                    ./img/team/desktop/human-1/img.webp    270w,
-                    ./img/team/desktop/human-1/img@2x.webp 540w,
-                    ./img/team/desktop/human-1/img@3x.webp 810w
-                  "
-                  type="image/webp"
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-1/img.webp     354w,
-                    ./img/team/tablet/human-1/img@2x.webp  708w,
-                    ./img/team/tablet/human-1/img@3x.webp 1062w
-                  "
-                  type="image/webp"
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-1/img.webp     450w,
-                    ./img/team/mobile/human-1/img@2x.webp  900w,
-                    ./img/team/mobile/human-1/img@3x.webp 1350w
-                  "
-                  type="image/webp"
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-
-                <source
-                  srcset="
-                    ./img/team/desktop/human-1/img.jpg    270w,
-                    ./img/team/desktop/human-1/img@2x.jpg 540w,
-                    ./img/team/desktop/human-1/img@3x.jpg 810w
-                  "
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-1/img.jpg     354w,
-                    ./img/team/tablet/human-1/img@2x.jpg  708w,
-                    ./img/team/tablet/human-1/img@3x.jpg 1062w
-                  "
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-1/img.jpg     450w,
-                    ./img/team/mobile/human-1/img@2x.jpg  900w,
-                    ./img/team/mobile/human-1/img@3x.jpg 1350w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-                <img
-                  src="./img/team/mobile/human-1/img.jpg"
-                  sizes="450px"
-                  alt="Фото разработчика"
-                />
-              </picture>
-
+              />
               <h3 class="team-name no-margin">Николай Кучеренко</h3>
               <p class="no-margin">Product Designer</p>
               <ul class="human-contacts no-margin no-padding">
@@ -438,77 +279,12 @@
               </ul>
             </li>
             <li class="human">
-              <!-- <img
+              <img
                 src="./img/human2.jpg"
                 alt="человек"
                 width="270"
                 height="260"
-              /> -->
-              <picture>
-                <source
-                  srcset="
-                    ./img/team/desktop/human-2/img.webp    270w,
-                    ./img/team/desktop/human-2/img@2x.webp 540w,
-                    ./img/team/desktop/human-2/img@3x.webp 810w
-                  "
-                  type="image/webp"
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-2/img.webp     354w,
-                    ./img/team/tablet/human-2/img@2x.webp  708w,
-                    ./img/team/tablet/human-2/img@3x.webp 1062w
-                  "
-                  type="image/webp"
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-2/img.webp     450w,
-                    ./img/team/mobile/human-2/img@2x.webp  900w,
-                    ./img/team/mobile/human-2/img@3x.webp 1350w
-                  "
-                  type="image/webp"
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-
-                <source
-                  srcset="
-                    ./img/team/desktop/human-2/img.jpg    270w,
-                    ./img/team/desktop/human-2/img@2x.jpg 540w,
-                    ./img/team/desktop/human-2/img@3x.jpg 810w
-                  "
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-2/img.jpg     354w,
-                    ./img/team/tablet/human-2/img@2x.jpg  708w,
-                    ./img/team/tablet/human-2/img@3x.jpg 1062w
-                  "
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-2/img.jpg     450w,
-                    ./img/team/mobile/human-2/img@2x.jpg  900w,
-                    ./img/team/mobile/human-2/img@3x.jpg 1350w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-                <img
-                  src="./img/team/mobile/human-2/img.jpg"
-                  sizes="450px"
-                  alt="Фото разработчика"
-                />
-              </picture>
+              />
               <h3 class="team-name no-margin">Ольга Иванова</h3>
               <p class="no-margin">Frontend Developer</p>
               <ul class="human-contacts no-margin no-padding">
@@ -543,77 +319,12 @@
               </ul>
             </li>
             <li class="human">
-              <!-- <img
+              <img
                 src="./img/human3.jpg"
                 alt="человек"
                 width="270"
                 height="260"
-              /> -->
-              <picture>
-                <source
-                  srcset="
-                    ./img/team/desktop/human-3/img.webp    270w,
-                    ./img/team/desktop/human-3/img@2x.webp 540w,
-                    ./img/team/desktop/human-3/img@3x.webp 810w
-                  "
-                  type="image/webp"
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-3/img.webp     354w,
-                    ./img/team/tablet/human-3/img@2x.webp  708w,
-                    ./img/team/tablet/human-3/img@3x.webp 1062w
-                  "
-                  type="image/webp"
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-3/img.webp     450w,
-                    ./img/team/mobile/human-3/img@2x.webp  900w,
-                    ./img/team/mobile/human-3/img@3x.webp 1350w
-                  "
-                  type="image/webp"
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-
-                <source
-                  srcset="
-                    ./img/team/desktop/human-3/img.jpg    270w,
-                    ./img/team/desktop/human-3/img@2x.jpg 540w,
-                    ./img/team/desktop/human-3/img@3x.jpg 810w
-                  "
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-3/img.jpg     354w,
-                    ./img/team/tablet/human-3/img@2x.jpg  708w,
-                    ./img/team/tablet/human-3/img@3x.jpg 1062w
-                  "
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-3/img.jpg     450w,
-                    ./img/team/mobile/human-3/img@2x.jpg  900w,
-                    ./img/team/mobile/human-3/img@3x.jpg 1350w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-                <img
-                  src="./img/team/mobile/human-3/img.jpg"
-                  sizes="450px"
-                  alt="Фото разработчика"
-                />
-              </picture>
+              />
               <h3 class="team-name no-margin">Андрей Шевченко</h3>
               <p class="no-margin">Marketing</p>
               <ul class="human-contacts no-margin no-padding">
@@ -648,77 +359,12 @@
               </ul>
             </li>
             <li class="human">
-              <!-- <img
+              <img
                 src="./img/human4.jpg"
                 alt="человек"
                 width="270"
                 height="260"
-              /> -->
-              <picture>
-                <source
-                  srcset="
-                    ./img/team/desktop/human-4/img.webp    270w,
-                    ./img/team/desktop/human-4/img@2x.webp 540w,
-                    ./img/team/desktop/human-4/img@3x.webp 810w
-                  "
-                  type="image/webp"
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-4/img.webp     354w,
-                    ./img/team/tablet/human-4/img@2x.webp  708w,
-                    ./img/team/tablet/human-4/img@3x.webp 1062w
-                  "
-                  type="image/webp"
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-4/img.webp     450w,
-                    ./img/team/mobile/human-4/img@2x.webp  900w,
-                    ./img/team/mobile/human-4/img@3x.webp 1350w
-                  "
-                  type="image/webp"
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-
-                <source
-                  srcset="
-                    ./img/team/desktop/human-4/img.jpg    270w,
-                    ./img/team/desktop/human-4/img@2x.jpg 540w,
-                    ./img/team/desktop/human-4/img@3x.jpg 810w
-                  "
-                  media="(min-width: 1200px)"
-                  sizes="270px"
-                />
-                <source
-                  srcset="
-                    ./img/team/tablet/human-4/img.jpg     354w,
-                    ./img/team/tablet/human-4/img@2x.jpg  708w,
-                    ./img/team/tablet/human-4/img@3x.jpg 1062w
-                  "
-                  media="(min-width: 769px)"
-                  sizes="354px"
-                />
-                <source
-                  srcset="
-                    ./img/team/mobile/human-4/img.jpg     450w,
-                    ./img/team/mobile/human-4/img@2x.jpg  900w,
-                    ./img/team/mobile/human-4/img@3x.jpg 1350w
-                  "
-                  media="(max-width: 768px)"
-                  sizes="450px"
-                />
-                <img
-                  src="./img/team/mobile/human-4/img.jpg"
-                  sizes="450px"
-                  alt="Фото разработчика"
-                />
-              </picture>
+              />
               <h3 class="team-name no-margin">Иван Николаев</h3>
               <p class="no-margin">UI Designer</p>
               <ul class="human-contacts no-margin no-padding">
@@ -762,42 +408,42 @@
 
           <ul class="company-list no-margin no-padding">
             <li class="company-item">
-              <a class="link" href="">
+              <a href="">
                 <svg class="icon logo-1">
                   <use href="./img/symbol-defs.svg#icon-logo-1"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
-              <a class="link" href="">
+              <a href="">
                 <svg class="icon logo-2">
                   <use href="./img/symbol-defs.svg#icon-logo-2"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
-              <a class="link" href=""
+              <a href=""
                 ><svg class="icon logo-3">
                   <use href="./img/symbol-defs.svg#icon-logo-3"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
-              <a class="link" href=""
+              <a href=""
                 ><svg class="icon logo-4">
                   <use href="./img/symbol-defs.svg#icon-logo-4"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
-              <a class="link" href=""
+              <a href=""
                 ><svg class="icon logo-5">
                   <use href="./img/symbol-defs.svg#icon-logo-5"></use>
                 </svg>
               </a>
             </li>
             <li class="company-item">
-              <a class="link" href=""
+              <a href=""
                 ><svg class="icon logo-6">
                   <use href="./img/symbol-defs.svg#icon-logo-6"></use>
                 </svg>
@@ -810,9 +456,9 @@
     <footer class="footer">
       <div class="conteiner footer-flex">
         <address class="contacts">
-          <a href="./index.html" class="footer-logo">
-            <span class="logo-web">Web </span>
-            <span class="footer-logo-studio">Studio </span>
+          <a href="./index.html" class="logo logo-w">
+            <span class="main-logo">Web </span>
+            <span class="footer-logo">Studio </span>
             <!-- <svg class="icon footer-logo">
                   <use href="./img/symbol-defs.svg#icon-footer-logo"></use>
                 </svg> -->
@@ -832,35 +478,35 @@
             <li class="item">
               <a
                 href="https://www.instagram.com/"
-                class="btn-icon icon-instagram"
+                class="footer-link btn-icon icon-instagram"
               >
               </a>
             </li>
             <li class="item">
               <a
                 href="https://twitter.com/explore"
-                class="btn-icon icon-twitter"
+                class="footer-link btn-icon icon-twitter"
               >
               </a>
             </li>
             <li class="item">
               <a
                 href="https://www.facebook.com/"
-                class="btn-icon icon-facebook"
+                class="footer-link btn-icon icon-facebook"
               >
               </a>
             </li>
             <li class="item">
               <a
                 href="https://www.linkedin.com/"
-                class="btn-icon icon-linkedin"
+                class="footer-link btn-icon icon-linkedin"
               >
               </a>
             </li>
           </ul>
         </div>
         <div class="form-conteiner">
-          <b class="subscribe-form">Подпишитесь на рассылку</b>
+          <b class="subscribe">Подпишитесь на рассылку</b>
           <form class="footer-form">
             <input
               class="footer-input"
@@ -882,6 +528,5 @@
     </footer>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
   </body>
 </html>
