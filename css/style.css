@@ -19,7 +19,6 @@
   --secondary-text-color: #212121;
   --secondary-white-color: #ffffff;
   --icon-color: #afb1b8;
-  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Обнуление */
 
@@ -54,15 +53,6 @@ body {
   color: var(--main-text-color);
   font-size: 14px;
   letter-spacing: 0.03em;
-  padding-top: 80px;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
 }
 
 .is-hidden {
@@ -92,8 +82,6 @@ header {
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 26px;
-
-  transition: 250ms text-shadow var(--cubic);
 }
 .main-logo {
   font-family: 'Raleway', sans-serif;
@@ -107,12 +95,6 @@ header {
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.logo-w:hover,
-.logo-w:focus {
-  text-shadow: 1px 4px 6px rgba(255, 255, 255, 0.16),
-    0px 4px 4px rgba(182, 173, 173, 0.06), 0px 1px 1px rgba(179, 165, 165, 0.12);
-}
-
 /* Стили главной навигации */
 .main-nav {
   color: var(--secondary-text-color);
@@ -121,32 +103,15 @@ header {
   letter-spacing: 0.02em;
 }
 
-.main-nav .link {
-  transition: 250ms color var(--cubic);
-}
-
 .link:hover,
 .link:focus {
   color: var(--accent-collor);
 }
 
 .active {
-  position: relative;
   color: var(--accent-collor);
-  /* padding-bottom: 32px;
-  border-bottom: 3px solid var(--accent-collor); */
-}
-
-.active::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-  border: var(--accent-collor) solid 2px;
-  border-radius: 2px;
-
-  content: '';
+  padding-bottom: 32px;
+  border-bottom: 3px solid var(--accent-collor);
 }
 
 /* Стиль аднесса */
@@ -176,7 +141,6 @@ footer {
 .footer-link {
   color: var(--secondary-white-color);
   background: rgba(255, 255, 255, 0.1);
-  transition: 250ms background-color var(--cubic);
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -190,7 +154,6 @@ footer {
 }
 .contacts .link {
   color: rgba(255, 255, 255, 0.6);
-  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts .link:hover,
 .contacts .link:focus {
@@ -222,13 +185,6 @@ footer {
   line-height: 187%;
   letter-spacing: 0.03em;
   color: var(--secondary-white-color);
-  transition: 250ms all var(--cubic);
-}
-.hero-link:hover,
-.hero-link:focus {
-  box-shadow: 1px 4px 6px rgba(255, 255, 255, 0.16),
-    0px 4px 4px rgba(255, 252, 252, 0.06), 0px 1px 1px rgba(209, 197, 197, 0.12);
-  transform: translate(1px, 1px);
 }
 
 .features-item {
@@ -281,7 +237,6 @@ footer {
   border: 1px solid transparent;
   border-radius: 50px;
   background-color: var(--secondary-white-color);
-  transition: 250ms color var(--cubic), 250ms background-color var(--cubic);
 }
 
 .human-contacts .link:hover,
@@ -312,43 +267,21 @@ footer {
   border-color: var(--accent-collor);
   color: var(--accent-collor);
 }
-.company-item a:focus {
-  border-color: var(--accent-collor);
-  color: var(--accent-collor);
-}
 
 /* portfolio */
 
 .filtr-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   font-weight: 500;
-  font-size: 18px;
-  line-height: 156%;
+  font-size: 16px;
+  line-height: 162%;
   text-align: center;
-  background-color: rgba(33, 150, 243, 0.9);
-  color: var(--secondary-white-color);
-  opacity: 0;
-  transform: translateY(100%);
-
-  transition: 250ms transform var(--cubic), 250ms opacity var(--cubic);
+  background-color: var(--secondary-backgrond);
+  color: var(--secondary-text-color);
 }
 
 .portfolio-card:hover .filtr-item {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.portfolio-card a:focus .filtr-item {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.animation {
-  position: relative;
-  overflow: hidden;
+  color: var(--secondary-white-color);
+  background-color: var(--accent-collor);
 }
 
 .projects-item {
@@ -574,9 +507,6 @@ btn:focus {
 .portfolio {
   padding: 94px 0;
 }
-.description {
-  padding-left: 24px;
-}
 /* filtr */
 
 .btn-secondary {
@@ -588,7 +518,6 @@ btn:focus {
   font-weight: 500;
   color: var(--secondary-text-color);
   background-color: var(--secondary-backgrond);
-  transition: 250ms all var(--cubic);
 }
 
 .btn-secondary:hover,
@@ -605,19 +534,13 @@ btn:focus {
 
 .portfolio-card {
   width: 370px;
+  padding-bottom: 20px;
   border: 1px solid #eeeeee;
 }
 
-.portfolio-card a {
-  display: block;
-  padding-bottom: 20px;
-}
-
-.portfolio-card:hover,
-.portfolio-card a:focus {
+.portfolio-card:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-  transition: 250ms box-shadow var(--cubic);
 }
 
 .filtr-item {
@@ -705,7 +628,6 @@ btn:focus {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: var(--icon-color);
-  transition: 250ms color var(--cubic);
 }
 
 .company-list .company-item + .company-item {
@@ -794,12 +716,6 @@ btn:focus {
 .form-conteiner .btn {
   display: flex;
   align-items: center;
-  transition: 250ms box-shadow var(--cubic);
-}
-.form-conteiner .btn:hover,
-.form-conteiner .btn:focus {
-  box-shadow: 1px 4px 6px rgba(230, 218, 218, 0.16),
-    0px 4px 4px rgba(175, 145, 145, 0.06), 0px 1px 1px rgba(133, 130, 130, 0.12);
 }
 
 .features-item::before {
@@ -873,7 +789,6 @@ btn:focus {
 .phone {
   display: flex;
   align-items: center;
-  transition: 250ms color var(--cubic);
 }
 .icon-mail {
   width: 16px;
@@ -894,9 +809,4 @@ btn:focus {
 
 .box {
   position: relative;
-  transition: 250ms box-shadow var(--cubic);
-}
-.box:hover {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
